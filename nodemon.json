@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "web/**/*"
+  ],
+  "watch": [
+    "js",
+    "index.js"
+  ],
+  "ext": "js json"
+}

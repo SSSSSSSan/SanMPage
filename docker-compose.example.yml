@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  sanmpage:
+    image: ghcr.io/sssssssan/sanmpage:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      NODE_ENV: production
+    restart: always

@@ -1,0 +1,85 @@
+/* 基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#page-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+/* 导航容器样式 */
+#nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 90%;
+}
+
+/* 分类样式 */
+.category {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 链接样式 */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link-item {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.link-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  #nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 90%;
+  }
+}

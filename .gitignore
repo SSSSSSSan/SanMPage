@@ -1,0 +1,30 @@
+# 依赖目录
+node_modules/
+
+# 配置文件
+config.ini
+data/web/list.json
+# 环境变量
+.env
+.env*.local
+
+# 日志文件
+*.log
+logs/
+
+# 构建产物
+dist/
+build/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE 文件
+.vscode/
+.idea/
+
+# 奇怪的文件
+.SynologyWorkingDirectory/
+desktop.ini
+

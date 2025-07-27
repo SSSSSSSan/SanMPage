@@ -1,0 +1,34 @@
+{
+    "tips": "将文件重名名为list.json,然后修改其中的内容即可. 这行可以删掉",
+    "title": "TITLE",
+    "backgroundColor": "#1A1A1A",
+    "fontColor": "#FFFEDA",
+    "list": [
+        {
+            "name": "Lab1",
+            "list": [
+                {
+                    "name": "百度",
+                    "link": "https://www.baidu.com/"
+                },
+                {
+                    "name": "必应",
+                    "link": "https://www.bing.com/"
+                }
+            ]
+        },
+        {
+            "name": "Lab2",
+            "list": [
+                {
+                    "name": "啊B",
+                    "link": "https://www.bilibili.com/"
+                },
+                {
+                    "name": "幻星",
+                    "link": "https://play-live.bilibili.com/"
+                }
+            ]
+        }
+    ]
+}
