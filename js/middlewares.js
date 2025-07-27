@@ -74,8 +74,8 @@ function verify(req, res, next) {
 
         // 先验证账户密码
         const user = {
-            name: req.query?.name || '*',
-            pass: req.query?.password * 1 || req.query?.password || '*'
+            name: req.query?.name * 1 || req.query?.name || '*',
+            password: req.query?.password * 1 || req.query?.password || '*'
         };
 
         if (
@@ -96,7 +96,7 @@ function verify(req, res, next) {
 
         console.log(`[middlewares][verify]auth failed`);
         console.log(user);
-        console.log(config.get('user', 'user'), config.get('password', 'user'));
+        console.log(config.get('name', 'user'), config.get('password', 'user'));
         res.status(401).send('Unauthorized');
     } catch (err) {
         next(err);
