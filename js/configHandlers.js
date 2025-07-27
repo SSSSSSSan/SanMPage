@@ -42,6 +42,7 @@ class Config {
             this.config = this._parseIni(fileContent);
             this.configFilePath = filePath;
             this._setupWatcher(); // 设置文件监视
+            console.log(`[configHandlers][constructor]加载配置文件: ${this.usingConfigName}`)
         } catch (err) {
             console.error('Error loading configuration:', err);
             throw err;

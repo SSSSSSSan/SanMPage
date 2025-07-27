@@ -75,7 +75,7 @@ function verify(req, res, next) {
         // 先验证账户密码
         const user = {
             name: req.query?.name || '*',
-            pass: req.query?.password * 1 || req.query?.password * 1 || '*'
+            pass: req.query?.password * 1 || req.query?.password || '*'
         };
 
         if (
