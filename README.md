@@ -4,6 +4,9 @@
 
 sanMPage 是一个基于 Node.js 的导航页面，旨在提供一个简洁的导航界面。用户可以通过配置文件自定义导航链接，并通过简单的身份验证访问该页面。
 
+
+  *deepseek和文心一言打了一架*
+
 ## 快速启动
 
 ### Node.js 本地运行
@@ -29,7 +32,7 @@ docker build -t sanmpage .
 # 运行容器（映射3000端口）
 docker run -p 3000:3000 sanmpage
 ```
-**重要提醒：数据持久化**  
+**重要提醒：数据持久化**
 运行容器时，请确保映射`app/data`目录到宿主机目录，以持久化配置文件和导航数据。否则容器重启后所有配置将丢失。示例命令：
 
 ```bash
@@ -74,6 +77,11 @@ http://localhost:300/?name=你的设置&password=你的设置
 
 **使用前重命名 list.example.json 为 list.json**
 
+#### 搜索引擎功能
+在配置文件中添加 `search` 字段可启用搜索引擎功能：
+- `name`: 搜索引擎显示名称
+- `link`: 搜索链接模板，使用 `{%search%}` 作为关键词占位符
+
 配置结构示例：
 
 ```json
@@ -82,6 +90,16 @@ http://localhost:300/?name=你的设置&password=你的设置
   "title": "TITLE",
   "backgroundColor": "#1A1A1A",
   "fontColor": "#FFFEDA",
+  "search": [
+    {
+      "name": "bing",
+      "link": "https://cn.bing.com/search?q={%search%} -csdn"
+    },
+    {
+      "name": "google",
+      "link": "https://www.google.com/search?q={%search%}"
+    }
+  ],
   "list": [
     {
       "name": "Lab1",
