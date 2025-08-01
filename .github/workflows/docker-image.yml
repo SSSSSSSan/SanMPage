@@ -24,7 +24,6 @@ jobs:
           ghcr.io/${{ env.LOWER_OWNER }}/sanmpage
         tags: |
           type=semver,pattern={{version}}
-          type=semver,pattern={{major}}.{{minor}}
         flavor: |
           latest=true
     
