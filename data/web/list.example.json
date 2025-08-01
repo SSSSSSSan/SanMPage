@@ -3,6 +3,16 @@
     "title": "TITLE",
     "backgroundColor": "#1A1A1A",
     "fontColor": "#FFFEDA",
+    "search": [
+        {
+            "name": "bing",
+            "link": "https://cn.bing.com/search?q={%search%} -csdn"
+        },
+        {
+            "name": "google",
+            "link": "https://www.google.com/search?q={%search%}"
+        }
+    ],
     "list": [
         {
             "name": "Lab1",
