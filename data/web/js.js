@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (searchTerm) {
                     const searchUrl = engine.link.replace('{%search%}', encodeURIComponent(searchTerm));
                     window.open(searchUrl, '_blank');
+                    searchInput.value = ''; // 清空搜索框
                 }
             });
             
