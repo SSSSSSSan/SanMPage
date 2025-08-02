@@ -9,6 +9,8 @@ RUN npm install --only=production && \
 
 # 阶段2: 创建最终镜像
 FROM node:18-alpine
+ARG APP_VERSION
+LABEL version="$APP_VERSION"
 WORKDIR /app
 
 # 从构建阶段复制依赖
