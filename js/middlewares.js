@@ -43,8 +43,8 @@ function isValidToken(token) {
 
         // 检查token是否在Map中且匹配时间戳
         if (tokenMap.has(uuid) && tokenMap.get(uuid) === timestamp) {
-            // 检查token是否在2秒有效期内
-            if (currentTime - timestamp <= 2000) {
+            // 检查token是否在5秒有效期内
+            if (currentTime - timestamp <= 5000) {
                 return true;
             }
         }
@@ -63,7 +63,7 @@ function generateAndSetToken(res) {
 
     // 将token存入Map
     tokenMap.set(uuid, timestamp);
-    res.cookie('token', token, { maxAge: 2000, httpOnly: true });
+    res.cookie('token', token, { maxAge: 5000, httpOnly: true });
 
     return token;
 }
